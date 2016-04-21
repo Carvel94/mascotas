@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :visitantes
+  root to:'visitantes#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +55,18 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  #get '/visitantes/:id', to: 'visitantes#view', as: 'visitante'
+  #resources :articulos
+  #resources :categorias, :only=>[:new, :create]
+
+  #resources :usuarios do
+  #  resources :articulos
+  #end
+
+  #namespace :administrador do
+  #  resources :articulos
+  #  get 'usuarios/new','usuario/new'
+  #end
+
 end
