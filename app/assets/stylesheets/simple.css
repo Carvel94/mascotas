@@ -48,3 +48,18 @@ ul.nav li a {
   color: #b94a48;
 }
 
+.flash_warnning {
+color: #9F6000;
+background-color: #FEEFB3;
+}
+
+.flash_sucess {
+color: #4F8A10;
+background-color: #DFF2BF;
+}
+
+ul{
+  display:flex;
+  justify-content: flex-end;
+}
+
