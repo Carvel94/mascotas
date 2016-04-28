@@ -17,6 +17,10 @@ class VisitantesController < ApplicationController
     Rails.logger.debug "DEBUG: entrando al método new"
     @visitante = Visitante.new
     Rails.logger.debug "DEBUG: Nombre del usuario" + @visitante.nombre
+    flash[:notice] = 'Bienvenido!'
+    flash[:alert] = 'Mi cumpleaños está cerca.'
+    flash[:warnning] = 'CUIDADO!'
+    flash[:sucess] = 'UPAAAAAA!'
   end
 
   # GET /visitantes/1/edit
@@ -33,7 +37,7 @@ class VisitantesController < ApplicationController
         format.html { redirect_to @visitante, notice: 'Visitante was successfully created.' }
         format.json { render :show, status: :created, location: @visitante }
       else
-        format.html { render :new }
+        format.html { render :new } #Carga de nuevo el formulario si hay error
         format.json { render json: @visitante.errors, status: :unprocessable_entity }
       end
     end
