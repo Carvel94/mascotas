@@ -8,7 +8,7 @@ def create
   @contacto = Contacto.new(secure_params)
   if @contacto.valid?
      # Falta por salvar la data
-     #UsuarioCorreo.contacto_email(@contacto).deliver
+     UsuarioCorreo.contacto_email(@contacto).deliver
 
      flash[:notice] = "Mensaje enviado de #{@contacto.nombre}."
      redirect_to root_path
